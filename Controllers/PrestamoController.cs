@@ -40,5 +40,6 @@ public IActionResult Evaluar(string nombre,string apellido,int edad,int dni,stri
         ViewBag.Resultado = resultado;
 
         return View("Resultado");
+        
     }
 }
