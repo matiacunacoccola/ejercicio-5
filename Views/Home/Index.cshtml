@@ -1,26 +1,79 @@
 ﻿﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Formulario";
 }
 
 <form action="/Prestamo/Evaluar" method="post">
 
-Nombre: <input type="text" name="nombre"><br>
+<label>Nombre:</label>
+<input type="text" name="nombre"><br>
 
-Edad: <input type="number" name="edad"><br>
+<label>Apellido:</label>
+<input type="text" name="apellido"><br>
 
-¿Trabaja?
+<label>Edad:</label>
+<input type="number" name="edad"><br>
+
+<label>DNI:</label>
+<input type="number" name="dni"><br>
+
+<label>¿Trabaja?</label>
+
 <input type="radio" name="trabaja" value="si"> Sí
-<input type="radio" name="trabaja" value="no"> No<br>
 
-Ingreso: <input type="number" name="ingreso"><br>
+<input type="radio" name="trabaja" value="no"> No
+<br>
 
-¿Tiene deudas?
+<label>Tipo de empleo:</label>
+
+<select name="tipoEmpleo">
+
+<option value="dependencia">Relación de dependencia</option>
+
+<option value="monotributista">Monotributista</option>
+
+<option value="autonomo">Autónomo</option>
+
+<option value="desempleado">Desempleado</option>
+
+</select>
+<br>
+
+<label>Ingreso:</label>
+<input type="number" name="ingreso"><br>
+
+<label>¿Tiene deudas?</label>
+
 <input type="radio" name="deudas" value="si"> Sí
-<input type="radio" name="deudas" value="no"> No<br>
 
-Monto: <input type="number" name="monto"><br>
+<input type="radio" name="deudas" value="no"> No
+<br>
 
-Acepta términos
+<label>Seleccione cuáles:</label><br>
+
+<input type="checkbox" name="tarjeta"> Tarjeta de crédito<br>
+
+<input type="checkbox" name="prestamoBanco"> Préstamo bancario<br>
+
+<input type="checkbox" name="prestamoInformal"> Préstamo informal<br>
+
+<label>Monto:</label>
+<input type="number" name="monto"><br>
+
+<label>Plazo:</label>
+
+<select name="plazo">
+
+<option value="6">6 meses</option>
+
+<option value="12">12 meses</option>
+
+<option value="24">24 meses</option>
+
+</select>
+<br>
+
+<label>Acepta términos</label>
+
 <input type="checkbox" name="terminos" value="ok"><br>
 
 <input type="submit" value="Enviar">

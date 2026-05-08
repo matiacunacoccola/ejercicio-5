@@ -10,21 +10,22 @@ public class SolicitudPrestamo
     private double monto;
     private int plazo;
     private bool aceptaTerminos;
+    private string apellido;
 
-    public SolicitudPrestamo(string nombre, int edad, int dni, bool trabaja, string tipoEmpleo, double ingreso, bool tieneDeudas, double monto, int plazo, bool aceptaTerminos)
-    {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.dni = dni;
-        this.trabaja = trabaja;
-        this.tipoEmpleo = tipoEmpleo;
-        this.ingreso = ingreso;
-        this.tieneDeudas = tieneDeudas;
-        this.monto = monto;
-        this.plazo = plazo;
-        this.aceptaTerminos = aceptaTerminos;
-    }
-
+  public SolicitudPrestamo(string nombre, string apellido, int edad, int dni, bool trabaja, string tipoEmpleo, double ingreso, bool tieneDeudas, double monto, int plazo, bool aceptaTerminos)
+{
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.edad = edad;
+    this.dni = dni;
+    this.trabaja = trabaja;
+    this.tipoEmpleo = tipoEmpleo;
+    this.ingreso = ingreso;
+    this.tieneDeudas = tieneDeudas;
+    this.monto = monto;
+    this.plazo = plazo;
+    this.aceptaTerminos = aceptaTerminos;
+}
     public string GetNombre()
      {
          return nombre; 
@@ -52,5 +53,9 @@ public class SolicitudPrestamo
     public bool GetAceptaTerminos()
      { 
         return aceptaTerminos; 
+     }
+     public string GetApellido()
+     {
+       return apellido;
      }
 }
